@@ -1,0 +1,149 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+<link rel="stylesheet"  href="{% static 'css/home.css' %}">
+<div class="all">
+
+<!-- <img  style="max-height: 600px;" width="100%;" background-position="transparent" src="{% static 'images/tra.jpg' %} "> -->
+<!-- <img style="max-height: 550px;" width="100%;" src="https://www.wallpapertip.com/wmimgs/155-1554570_indian-train-images-hd.jpg" > -->.
+
+<!-- <form>
+  <div class="mb-3"  >
+    <h1 class="book">BOOK TICKETS</h1><br>
+    <label for="exampleInputEmail1" class="form-label" >SOURCE</label>
+    <input type="source" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" style="width:400px" placeholder="form">
+    
+  </div>
+  <div class="mb-3" >
+    <label for="exampleInputPassword1" style="margin-top: 10px; class="form-label" >DESTINATION</label>
+    <input type="destination" style="width:400px " class="form-control" id="exampleInputPassword1" placeholder="to">
+  </div><br>
+  
+  <button type="submit" class="bn btn-primary" >SEARCH</button>
+</form> -->
+
+
+
+<div class="card1">
+  <div class="card-body">
+  <form action="/action_page.php">
+    <h1 class="book">
+      BOOK TICKETS
+    </h1><br>
+    <label for="exampleInputEmail1" class="form-label">SOURCE</label>
+    <select class="form-select" id="validationDefault04" style="width:400px" name="source">
+      <option value="volvo">
+        
+      </option>
+    {% for t in trains %}
+    <option value="volvo">
+      {{ t.source}}
+    </option>
+    {% endfor %}
+  </select>
+  <BR><BR>
+  <label for="exampleInputEmail1" class="form-label">DESTINATION</label>
+  <select class="form-select" id="validationDefault04" style="width:400px" name="destination">
+    <option value="volvo">
+      
+    </option>
+    {% for t in trains %}
+    <option value="saab">
+      {{ t.destination }}
+    </option>
+    {% endfor %}
+  </select>
+  <button type="submit" class="bntn btn-primary" style="margin-top: 50px">SEARCH
+  </button>
+</form>
+</div>
+</div>
+</div>
+<h1 style="margin-left:340px; margin-top: 50px;">
+  Have you not found the right one?
+</h1>
+<h1 style="margin-left:340px;">
+  Find a service suitable for you here.
+</h1>
+
+<a href="https://www.goindigo.in/"><i style="margin-left:250px; margin-top: 80px; " class="fas fa-plane-departure fa-5x"></i></a>
+
+<a href="https://www.trivago.in/"><i style="margin-left:90px; margin-top: 80px; " class="fas fa-hotel fa-5x"></i></a>
+
+<a href="https://www.redbus.com/"><i style="margin-left:90px; margin-top: 80px; " class="fas fa-bus-alt fa-5x"></i></a>
+
+<a href="https://www.zomato.com/akola/restaurants?context=delivery"><i style="margin-left:90px; margin-top: 80px; "class="fas fa-utensils fa-5x"></i></a>
+
+<a href="https://www.gifts.com/"><i style="margin-left:90px; margin-top: 80px;" class="fas fa-gifts fa-5x"></i></a>
+<pre class="tab" style="margin-left:230px; margin-top: 30px;">  flight booking            hotel booking              bus                    food                   gifts</pre>
+
+
+<h1 style=" margin-top: 100px; margin-left: 560px">HOLIDAYS</h1>
+
+<div class="container">
+  <div class="row">
+    <div class='col-3 my-17' >
+      <div class="card mx-auto" style="width: 18rem;">
+        <div class="card-body ">
+          <p>wedasda</p>
+          <p>wedasda</p>
+          <p>wedasda</p>
+          <p>wedasda</p>
+          <p>wedasda</p>
+          <p>wedasda</p>
+          <p>wedasda</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="card mx-auto" style="width: 17rem;">
+      <div class="card-body">
+        <p>wedasda</p>
+        <p>wedasda</p>
+        <p>wedasda</p>
+        <p>wedasda</p>
+        <p>wedasda</p>
+        <p>wedasda</p>
+        <p>wedasda</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+
+    <div class="card mx-auto" style="width: 17rem;">
+      <div class="card-body">
+        <p>wedasda</p>
+        <p>wedasda</p>
+        <p>wedasda</p>
+        <p>wedasda</p>
+        <p>wedasda</p>
+        <p>wedasda</p>
+        <p>wedasda</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+
+
+    <div class="card mx-auto" style="width: 17rem;">
+      <div class="card-body">
+        <p>wedasda</p>
+        <p>wedasda</p>
+        <p>wedasda</p>
+        <p>wedasda</p>
+        <p>wedasda</p>
+        <p>wedasda</p>
+        <p>wedasda</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+<hr>
+
+    
+<!-- <h5 style="margin-left:0px; margin-top: 30px;" >hotel booking</h5> -->
+
+{% endblock content %}

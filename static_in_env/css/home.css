@@ -1,0 +1,43 @@
+.all{
+	background-image :url(../images/rr.jpg);
+	background-repeat : no-repeat;
+	/*width : 1340px;*/
+	height : 700px;
+	background-size: 100%;
+
+}
+
+
+.card1{
+    height:420px;
+    width:500px;
+	margin-top: 100px;
+	margin-left: 60px;
+	background-color: white;
+	
+
+}
+
+
+.book{	
+	margin-left: 80px; 
+    text-shadow : 0px 1px 5px #3390FF;
+}
+
+.bntn{
+width:250px;
+margin-left: 90px;
+height:50px;
+border-width: 5px
+
+
+}
+
+.form-control{
+
+	box-shadow: 
+          0 0 1px rgba(0, 0, 0, 0.3), 
+          0 3px 7px rgba(0, 0, 0, 0.3), 
+          inset 0 1px rgba(255,255,255,1),
+          inset 0 -3px 2px rgba(0,0,0,0.25);
+}

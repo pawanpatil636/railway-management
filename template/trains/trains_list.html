@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+{% for t in train %}
+</br>
+{{t.trainname}}.................</br>
+{{t.departuretime}}................</br>
+{{t.runningdays}}....................</br>
+{{t.source}}....................</br>
+	{% for j in t.station_set.all %}</br>
+	{{ j.station }}ffff
+{% endfor %} 
+{% endfor %}
+
+{% endblock content %}

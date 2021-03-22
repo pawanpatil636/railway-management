@@ -1,0 +1,220 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+<body><div class='col-6 mx-auto my-5'>
+            <div class="card broder-info p-5">         
+                 <div class="h4 alert alert-success text-center" role="alert">registeration page</div>
+
+
+
+<form action="." method='post' enctype="multipart/form-data">
+ 	{% csrf_token %}  
+<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+  <li class="nav-item" role="presentation">
+    <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Home</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Profile</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Contact</button>
+  </li>
+</ul>
+<div class="tab-content" id="pills-tabContent">
+  <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+  	<div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">username</label>
+        <input type="text" class="form-control"  name="user_name" id="exampleInputEmail1" aria-describedby="emailHelp">
+        
+        </div>
+        <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">firstname</label>
+        <input type="text" class="form-control" name="first_name" id="exampleInputPassword1">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">last name </label>
+            <input type="text" class="form-control" name="last_name" id="exampleInputPassword1">
+        </div>
+        
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">password</label>
+            <input type="password" class="form-control" name="password" id="exampleInputPassword1">
+        </div>
+        
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">password1</label>
+            <input type="password" class="form-control" name= "password1" id="exampleInputPassword1">
+        </div>
+    </div>
+
+
+<div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+  	<div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">aadhar card</label>
+        <input type="file" class="form-control" name= "aadhar_proof" id="exampleInputPassword1">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">marital status</label>
+        <input type="text" class="form-control" name= "marital_status" id="exampleInputPassword1">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">age</label>
+        <input type="number" class="form-control" name= "age" id="exampleInputPassword1">
+    </div>
+     <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">date of birth</label>
+        <input type="date" class="form-control" name= "dob" id="exampleInputPassword1">
+    </div>
+
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">gender</label>
+        <input type="text" class="form-control" name= "gender" id="exampleInputPassword1">
+    </div>
+                    
+
+  </div>
+  <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+        <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">phone no</label>
+        <input type="tel" class="form-control" name="phone_no" id="exampleInputPassword1">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">email</label>
+        <input type="email" class="form-control"  name="email" id="exampleInputPassword1">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">state</label>
+        <input type="text" class="form-control" name= "state" id="exampleInputPassword1">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">country</label>
+        <input type="text" class="form-control" name= "country" id="exampleInputPassword1">
+    </div>
+    <button type="submit" class="btn btn-primary" style="width: 200px">Submit</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+        
+
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+      
+
+
+{% endblock content %}
+
+   
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   <!--  <form action="." method='post' enctype="multipart/form-data">
+                    {% csrf_token %} 
+                    <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">username</label>
+                    <input type="text" class="form-control"  name="user_name" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    
+                    </div>
+                    <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">firstname</label>
+                    <input type="text" class="form-control" name="first_name" id="exampleInputPassword1">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">last name </label>
+                        <input type="text" class="form-control" name="last_name" id="exampleInputPassword1">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">email</label>
+                        <input type="email" class="form-control"  name="email" id="exampleInputPassword1">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">phone no</label>
+                        <input type="tel" class="form-control" name="phone_no" id="exampleInputPassword1">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">age</label>
+                        <input type="number" class="form-control" name= "age" id="exampleInputPassword1">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">gender</label>
+                        <input type="number" class="form-control" name= "gender" id="exampleInputPassword1">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">date of birth</label>
+                        <input type="number" class="form-control" name= "dob" id="exampleInputPassword1">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">aadhar card</label>
+                        <input type="file" class="form-control" name= "aadhar_proof" id="exampleInputPassword1">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">state</label>
+                        <input type="text" class="form-control" name= "state" id="exampleInputPassword1">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">country</label>
+                        <input type="text" class="form-control" name= "country" id="exampleInputPassword1">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">marital status</label>
+                        <input type="text" class="form-control" name= "marital_status" id="exampleInputPassword1">
+                    </div>
+
+
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">password</label>
+                        <input type="password" class="form-control" name= "password" id="exampleInputPassword1">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">password1</label>
+                        <input type="password" class="form-control" name= "password1" id="exampleInputPassword1">
+                    </div>
+                    
+                
+                    
+                    <button type="submit" class="btn btn-primary">Submit</button>
+        </form>-->
+ 
