@@ -1,19 +1,19 @@
 from django.shortcuts import render, redirect
 
-from .models import Trains
+from .models import Trains,Stations
 
 
-def search_train(request):	
-	train = Trains.objects.all()
-	for train in Trains.objects.all():
-		for station in train.station.all():
-			print(station)
+def search_train(request):
+	train = Trains.objects.get(id=3)
+	print(train)
+	station = Stations.objects.all()
 
-	# station = train.stations_set.all()
-	# source = Trains.objects.get(pk=request.POST['source'])
- #    dest = Trains.objects.get(pk=request.POST['destination'])
+	lis = []
+	for st in train.station.all():
+		lis.append(st)
 
-	return render(request,'trains/trains_list.html',{'train':train})
+	
+	return render(request,'trains/trains_list.html',{'train':train,'station':station})
 	
 
 # Create your views here.

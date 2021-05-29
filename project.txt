@@ -1,0 +1,9 @@
+1. first register the user for booking train.
+2. then login using the registered details.
+3. home page will render after login. 
+4. search for the train using source and destination to which you want to travell
+5. the result of searched train will be shown in new page with details
+6. select the booking plan suitable for you 
+7. after selecting booking plan it will render to passenger details page ,add passenger details  ,address, payment details.
+8. then after payment the bookimg will be confirmed
+9. details of user will be displayed in account section of navigation bar.

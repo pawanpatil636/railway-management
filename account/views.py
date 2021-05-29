@@ -1,9 +1,8 @@
 from django.shortcuts import render , redirect
 from .models import Account
 from django.contrib.auth.models import User
-from django.contrib.auth import authenticate,login
+from django.contrib.auth import authenticate, login
 from django.contrib.auth import logout
-
 
 def register(request):
       if request.method == 'POST':
@@ -22,8 +21,6 @@ def register(request):
             password = request.POST['password']
             password1 = request.POST['password1']
 
-
-
             user = User.objects.create_user(username=username,first_name=first_name,last_name=last_name,email=email,password=password)
             user.save()
             
@@ -33,20 +30,26 @@ def register(request):
       return render(request, 'account/register.html')
 
 def logins(request):
+      li=[1,2,3,233333,"high",121212,1212,1212,1212]
+      print(li.__sizeof__())
       if not request.user.is_authenticated:
-            if request.method=="POST":
+            if request.method == 'POST':
                   username=request.POST['user_name']
                   password=request.POST['password']
-                  user=authenticate(request,username=username,password=password) 
-            # if user is not None:
-            #     login(request,user)
-            #     if request.user.is_superuser:
-            #         return redirect('/bazzar/add-product') 
-            #     else:
-                  return redirect('/eticket/home/')
+                  user=authenticate(request,username=username,password=password)
+                  if user is not None:
+                        login(request,user)
+                        return redirect('/eticket/home/')
             return render(request,'account/login.html')
       else:
-            return redirect('/eticket/home/')            
+            return redirect('/eticket/home/')
+            
+            
+            
+              
+            
+  
+                        
  
 
 def logout_view(request):

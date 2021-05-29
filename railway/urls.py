@@ -8,3 +8,4 @@ urlpatterns = [
     path('eticket/',include("eticket.urls",namespace="eticket")),
     path('train/',include("train.urls",namespace="train")),
 ]
+  

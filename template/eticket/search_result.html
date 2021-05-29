@@ -1,0 +1,111 @@
+{% extends 'base.html' %}
+{% block content %}
+
+ 
+<!-- <nav class="navbar navbar-light bg-light">
+  <div class="container" style="background-color: blue;">
+    <a class="navbar-brand" href="#">
+    	<i class="fas fa-subway fa-2x"></i>
+      <P>
+    </a>
+  </div>
+</nav> -->
+
+
+
+<!-- 
+<form action= "." method = "GET">
+  {% csrf_token %}
+  {{ form.as_p}}
+ <input type="submit">
+</form> -->
+<div class="card" style="width: 50rem; margin-left: 350px; margin-bottom:auto; margin-top: 50px ">
+  <div class="card-body">
+    <h5 class="card-title">
+    	{% for i in a %}
+    	{{ i }}
+    	{% endfor %}
+    </h5>
+  {% for t in trains %}
+    duration : {{ t.duration }} 
+  {% endfor %}
+  <p class="card-text">
+    	
+  
+<div class="container">
+	<div class="row">
+		<div class='col-3 my-17' >
+			<div class="card" style="width: 10rem;">
+				<div class="card-body">
+        <input type="checkbox"/>
+
+					<h5 class="card-title">AC 3 tier(3A)</h5>
+					<p class="card-text">rupees:</p>
+				</div>
+			</div>
+		</div>
+		<div class='col-3 my-17' >
+        <div class="card" style="width: 10rem;">
+        <div class="card-body">
+        <input type="checkbox"/>
+
+					<h5 class="card-title">AC 2 tier(2A)</h5>
+					<p class="card-text">rupees:</p>
+				</div>
+            </div>
+        </div>
+        <div class='col-3 my-17' >
+        	<div class="card" style="width: 10rem;">
+        		<div class="card-body">
+        <input type="checkbox"/>
+
+        			<h5 class="card-title">AC 1 tier(1A)</h5>
+        			<p class="card-text">rupees:</p>
+        		</div>
+            </div>
+        </div>
+    </div>
+</div>
+</p>
+
+<!-- Button trigger modal -->
+
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  book now
+</button>
+
+<!-- Modal -->
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">disclaimer</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+      You searched trains from BDTS to HWH but booking from CSMT to HWH. Do you want to continue with it?. Do you want to continue with the same? 
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">no</button>
+        <!-- <button type="button" class="btn btn-primary">yes</button> -->
+          <a href="{% url 'eticket:passenger_details' %}" class="btn btn-primary">yes</a>
+
+    
+      </div>
+    </div>
+  </div>
+</div>
+
+ 
+  </div>
+</div>
+
+
+...</br>
+
+
+
+
+{% endblock content %}

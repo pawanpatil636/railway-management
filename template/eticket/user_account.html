@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+{{ details.aadharproof }}
+<h1 style=" animation: bounce; animation-duration: 2s; margin-left: 600px; 
+margin-top: 100px;" >WELCOME USER</h1>
+
+<button>payment history</button>
+<button>booking history</button>
+<button>refund history</button>
+<button>user history</button>
+<div class="row no-gutters">
+<div class="col-md-5 no-gutters">
+	<div class="left">
+
+<img src="{% static 'images/neg.jpg' %}"><br>
+<button>update profile photo</button>
+</div>
+</div>
+<div class="col-md-5 no-gutters">
+	<div class="right">
+
+</div>
+</div>
+</div>
+
+{% endblock content%}
